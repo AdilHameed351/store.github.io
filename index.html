@@ -9,210 +9,282 @@
     <title>Main Street Bistro</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="top-info">
-            <p>Minimum Delievery Order is $30. <a href="">Order Now >></a></p>
-        </div>
-        <div class="nav">
-            <div class="nav-logo">
-                <a href=""><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
-            </div>
-            <div class="nav-items-container">
-                <ul class="nav-items">
-                    <a href="">
-                        <li class="nav-home">Home<span>Home</span></li>
-                    </a>
-                    <a href="">
-                        <li class="nav-about">About Us<span>About Us</span></li>
-                    </a>
-                    <a href="">
-                        <li class="nav-menu">Menu<span>Menu</span></li>
-                    </a>
-                    <a href="">
-                        <li class="nav-contact-us">Contact Us<span>Contact Us</span></li>
-                    </a>
-                </ul>
-            </div>
-            <div class="nav-icons">
-                <div class="nav-icons-search">
-                    <a href=""><i class="far fa-search"><span>Search</span></i></a>
+    <div class="wrapper" id="wrapper">
+        <div class="search-option-container" id="search-option-container">
+            <div class="search-option">
+                <p class="search-text">Start typing and hit Enter</p>
+                <div class="search-bar" id="search-bar">
+                    <input type="text" placeholder="Search anything" id="search-bar-input" />
+                    <i class="far fa-search"></i>
                 </div>
-                <div class="nav-icons-user">
-                    <a href=""><i class="far fa-user"><span>User</span></i></a>
-                </div>
-                <div class="nav-icons-cart">
-                    <a href=""><i class="far fa-shopping-cart"><span>Cart</span></i></a>
-                </div>
+                <p class="search-note" id="search-note"></p>
+                <span id="search-option-close-button">x</span>
             </div>
         </div>
-        <div class="large-image">
-            <div class="image">
-                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/desktop.jpg" alt="large image" width="100%" />
-            </div>
-            <div class="text-on-image">
-                <p class="big-text">A Cuisine That Meets US <br />Where We Are Today</p>
-                <br />
-                <p class="small-text">Asian and middle-eastern cuisine <br />made with 100% love and fresh ingredients.</p>
-            </div>
-        </div>
-        <div class="info-panel">
-            <div class="info-vegan">
-                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/vegan_friendly.png" alt="vegan friendly options" width="80" />
-                <p>Vegan Friendly Options</p>
-            </div>
-            <div class="info-home-delivery">
-                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/delivery.png" alt="vegan friendly options" width="80" />
-                <p>Home Delivery</p>
-            </div>
-            <div class="info-pickup">
-                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Pickup_8a9caad2-c82f-4f05-a02c-b025ab5a420f.png" alt="vegan friendly options" width="80" />
-                <p>Pickup</p>
-            </div>
-        </div>
-        <div class="content">
-            <p>We are extremely proud to serve main street neighbourhood. We aim to provide you not only healthy food but we put 100% love and heart into making your food. Our food is made with fresh and top-quality ingredients. We are Asian and middle-eastern cuisine mixed with vegan friendly options and a selection of salads and pizzas from around the world. We wish to satisfy our customers with what we offer. We are open to serve you better, and always respect and look forward to your suggestions.</p>
-        </div>
-        <div class="menu">
-            <p class="menu-heading">Our Menu</p>
-            <div class="menu-options">
-                <ul class="menu-list">
-                    <a href="">
-                        <li class="vegan-pizzas">Vegan Pizzas</li>
-                    </a>
-                    <a href="">
-                        <li class="pizzas">Pizzas</li>
-                    </a>
-                    <a href="">
-                        <li class="drinks">Drinks</li>
-                    </a>
-                    <a href="">
-                        <li class="salads">Salads</li>
-                    </a>
-                    <a href="">
-                        <li class="pides">Pides</li>
-                    </a>
-                    <a href="">
-                        <li class="sides">Sides</li>
-                    </a>
-                    <a href="">
-                        <li class="wraps">Wraps</li>
-                    </a>
-                    <a href="">
-                        <li class="kids-meal">Kids Meal</li>
-                    </a>
-                    <a href="">
-                        <li class="Bistro-set-meals">Bistro Set Meals</li>
-                    </a>
-                    <a href="">
-                        <li class="Combos">Combos</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="menu-cart">
-                <div class="cart cart-one">
-                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1048511935.png?" alt="Mediterranean Pizza" />
-                    <p class="menu-info"><a href="">Mediterranean Pizza</a></p>
-                    <div class="menu-about">
-                        <p class="menu-price">$18.99</p>
-                        <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+        <div class="js-minicart minicart" id="js-minicart">
+            <div class="relative">
+                <div class="mini-content">
+                    <div class="mini-cart-head">
+                        <p class="mini-cart-head-close-button" id="mini-cart-head-close-button">X</p>
+                        <h3 class="mini-cart-head-heading">Shopping Cart</h3>
+                        <p class="mini-cart-head-product-count">0</p>
                     </div>
                 </div>
-                <div class="cart cart-two">
-                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1945423519.png?" alt="Mediterranean Pizza" />
-                    <p class="menu-info"><a href="">Meat Crumble (Plant Based)</a></p>
-                    <div class="menu-about">
-                        <p class="menu-price">$18.99</p>
-                        <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
-                    </div>
-                </div>
-                <div class="cart cart-three">
-                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_608680349.png?" alt="Mediterranean Pizza" />
-                    <p class="menu-info"><a href="">Veggie</a></p>
-                    <div class="menu-about">
-                        <p class="menu-price">$18.99</p>
-                        <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
-                    </div>
-                </div>
-                <div class="cart cart-four">
-                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_403620481.png" alt="Mediterranean Pizza" />
-                    <p class="menu-info"><a href="">Eggplant And Zucchini Pizza</a></p>
-                    <div class="menu-about">
-                        <p class="menu-price">$18.99</p>
-                        <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                <div class="mini-cart-bottom">
+                    <div class="list-product-minicart">
+                        <div class="empty-product-minicart">
+                            <p class="empty-product-minicart-para">Your shopping bag is empty</p>
+                            <button class="empty-product-minicart-button">Go To The Shop</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="big-image">
-            <a href="">
-                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/shutterstock_1350432587_1.png" width="100%" alt="large image" />
-            </a>
-            <p>Savour Wraps All Year-Round <br />At Main Street Bistro</p>
-        </div>
-        <div class="sponser">
-            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Skip1.jpg" alt="Skip The Dishes" width="185" />
-            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Uber_logo.jpg" alt="Uber Eats" width="185" />
-            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/fantuan.jpg" alt="Delivery Fantuan" width="185" />
-            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/logo2.jpg?v=1625569827" alt="Kabu Delivers" width="185" />
-            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Doordas.jpg?v=1625566975" alt="Doordash" width="185" /> 
-        </div>
-        <div class="footer">
-            <div class="footer-top">
-                <div class="footer-logo">
+        <div class="body" id="body">
+            <div class="top-info">
+                <p>Minimum Delievery Order is $30. <a href="">Order Now >></a></p>
+            </div>
+            <!-- <div class="js-minicart minicart" id="js-minicart">
+                <div class="relative">
+                    <div class="mini-content">
+                        <div class="mini-cart-head">
+                            <p class="mini-cart-head-close-button" id="mini-cart-head-close-button">X</p>
+                            <h3 class="mini-cart-head-heading">Shopping Cart</h3>
+                            <p class="mini-cart-head-product-count">0</p>
+                        </div>
+                    </div>
+                    <div class="mini-cart-bottom">
+                        <div class="list-product-minicart">
+                            <div class="empty-product-minicart">
+                                <p class="empty-product-minicart-para">Your shopping bag is empty</p>
+                                <button class="empty-product-minicart-button">Go To The Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="nav">
+                <div class="nav-logo">
                     <a href=""><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
                 </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li>
-                            <a href="">Home</a>
-                        </li>
-                        <li>
-                            <a href="">About</a>
-                        </li>
-                        <li>
-                            <a href="">Menu</a>
-                        </li>
+                <div class="nav-items-container">
+                    <ul class="nav-items">
+                        <a href="">
+                            <li class="nav-home">Home<span>Home</span></li>
+                        </a>
+                        <a href="">
+                            <li class="nav-about">About Us<span>About Us</span></li>
+                        </a>
+                        <a href="">
+                            <li class="nav-menu">Menu<span>Menu</span></li>
+                        </a>
+                        <a href="">
+                            <li class="nav-contact-us">Contact Us<span>Contact Us</span></li>
+                        </a>
                     </ul>
                 </div>
-                <div class="footer-ex-nav">
-                    <ul>
-                        <li>
-                            <a href="">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="">Terms & Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-info-envelope">
-                        <i class="fas fa-envelope"></i>
-                        <a href="">info@mainstreetbistro.ca</a>
+                <div class="nav-icons">
+                    <div class="nav-icons-search">
+                        <i class="far fa-search" id="nav-search-icon"><span>Search</span></i>
                     </div>
-                    <div class="footer-info-location">
-                        <i class="fas fa-location-arrow"></i>
-                        4331 Main Street, Vancouver, BC V5V 3R1
+                    <div class="nav-icons-user">
+                        <i class="far fa-user"><span>User</span></i>
                     </div>
-                    <div class="footer-info-phone">
-                        <i class="fas fa-phone"></i>
-                        <a href="">(604)568-4713,(604)568-4712</a> 
-                    </div>
-                    <div class="footer-info-clock">
-                        <i class="fa fa-clock"></i>
-                        Mon-Thurs - 11am to 9pm / Friday - 11am to 10pm / Sat-Sun - 11am to 9pm
-                    </div>
-                    <div class="footer-info-note">
-                        <p>Please Note: Orders are accepted up to 20 minutes before closing</p>
+                    <div class="nav-icons-cart">
+                        <i class="far fa-shopping-cart" id="shopping-cart"><span>Cart</span></i>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>Designed by Headstartt</p>
+            <div class="large-image">
+                <div class="image">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/desktop.jpg" alt="large image" width="100%" />
+                </div>
+                <div class="text-on-image">
+                    <p class="big-text">A Cuisine That Meets US <br />Where We Are Today</p>
+                    <br />
+                    <p class="small-text">Asian and middle-eastern cuisine <br />made with 100% love and fresh ingredients.</p>
+                </div>
+            </div>
+            <div class="info-panel">
+                <div class="info-vegan">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/vegan_friendly.png" alt="vegan friendly options" width="80" />
+                    <p>Vegan Friendly Options</p>
+                </div>
+                <div class="info-home-delivery">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/delivery.png" alt="vegan friendly options" width="80" />
+                    <p>Home Delivery</p>
+                </div>
+                <div class="info-pickup">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Pickup_8a9caad2-c82f-4f05-a02c-b025ab5a420f.png" alt="vegan friendly options" width="80" />
+                    <p>Pickup</p>
+                </div>
+            </div>
+            <div class="content">
+                <p>We are extremely proud to serve main street neighbourhood. We aim to provide you not only healthy food but we put 100% love and heart into making your food. Our food is made with fresh and top-quality ingredients. We are Asian and middle-eastern cuisine mixed with vegan friendly options and a selection of salads and pizzas from around the world. We wish to satisfy our customers with what we offer. We are open to serve you better, and always respect and look forward to your suggestions.</p>
+            </div>
+            <div class="menu">
+                <p class="menu-heading">Our Menu</p>
+                <div class="menu-options">
+                    <ul class="menu-list">
+                        <a href="">
+                            <li class="vegan-pizzas">Vegan Pizzas</li>
+                        </a>
+                        <a href="">
+                            <li class="pizzas">Pizzas</li>
+                        </a>
+                        <a href="">
+                            <li class="drinks">Drinks</li>
+                        </a>
+                        <a href="">
+                            <li class="salads">Salads</li>
+                        </a>
+                        <a href="">
+                            <li class="pides">Pides</li>
+                        </a>
+                        <a href="">
+                            <li class="sides">Sides</li>
+                        </a>
+                        <a href="">
+                            <li class="wraps">Wraps</li>
+                        </a>
+                        <a href="">
+                            <li class="kids-meal">Kids Meal</li>
+                        </a>
+                        <a href="">
+                            <li class="Bistro-set-meals">Bistro Set Meals</li>
+                        </a>
+                        <a href="">
+                            <li class="Combos">Combos</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="menu-cart">
+                    <div class="cart cart-one">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1048511935.png?" alt="Mediterranean Pizza" />
+                        <p class="menu-info"><a href="">Mediterranean Pizza</a></p>
+                        <div class="menu-about">
+                            <p class="menu-price">$18.99</p>
+                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="cart cart-two">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1945423519.png?" alt="Mediterranean Pizza" />
+                        <p class="menu-info"><a href="">Meat Crumble (Plant Based)</a></p>
+                        <div class="menu-about">
+                            <p class="menu-price">$18.99</p>
+                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="cart cart-three">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_608680349.png?" alt="Mediterranean Pizza" />
+                        <p class="menu-info"><a href="">Veggie</a></p>
+                        <div class="menu-about">
+                            <p class="menu-price">$18.99</p>
+                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="cart cart-four">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_403620481.png" alt="Mediterranean Pizza" />
+                        <p class="menu-info"><a href="">Eggplant And Zucchini Pizza</a></p>
+                        <div class="menu-about">
+                            <p class="menu-price">$18.99</p>
+                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="big-image">
+                <a href="">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/shutterstock_1350432587_1.png" width="100%" alt="large image" />
+                </a>
+                <p>Savour Wraps All Year-Round <br />At Main Street Bistro</p>
+            </div>
+            <div class="sponser">
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Skip1.jpg" alt="Skip The Dishes" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Uber_logo.jpg" alt="Uber Eats" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/fantuan.jpg" alt="Delivery Fantuan" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/logo2.jpg?v=1625569827" alt="Kabu Delivers" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Doordas.jpg?v=1625566975" alt="Doordash" width="185" /> 
+            </div>
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href=""><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">About</a>
+                            </li>
+                            <li>
+                                <a href="">Menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-ex-nav">
+                        <ul>
+                            <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-info-envelope">
+                            <i class="fas fa-envelope"></i>
+                            <a href="">info@mainstreetbistro.ca</a>
+                        </div>
+                        <div class="footer-info-location">
+                            <i class="fas fa-location-arrow"></i>
+                            4331 Main Street, Vancouver, BC V5V 3R1
+                        </div>
+                        <div class="footer-info-phone">
+                            <i class="fas fa-phone"></i>
+                            <a href="">(604)568-4713,(604)568-4712</a> 
+                        </div>
+                        <div class="footer-info-clock">
+                            <i class="fa fa-clock"></i>
+                            Mon-Thurs - 11am to 9pm / Friday - 11am to 10pm / Sat-Sun - 11am to 9pm
+                        </div>
+                        <div class="footer-info-note">
+                            <p>Please Note: Orders are accepted up to 20 minutes before closing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Designed by Headstartt</p>
+                </div>
             </div>
         </div>
+        <div id="form-user" class="form-user">
+            <form class="form-content animate" action="/action_page.php">
+                <div class="form-user-close-button">
+                    <span onclick="document.getElementById('form-user').style.dispay = 'none'" class="close" title="Close Popup">&times;</span>
+                </div>
+                <div class="form-user-img-container">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" />
+                    <hr />
+                    <p>Great to have you back!</p>
+                </div>
+                <div class="form-user-container">
+                    <input type="email" placeholder="Email address" name="email" required />
+                    <input type="password" placeholder="Password" name="password" required />
+                    <p><small>Forgot your password?</small></p>
+                    <input type="submit" value="LOG IN" />
+                    <p><small>Don't have an account? Register Now</small></p>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
