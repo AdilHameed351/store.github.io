@@ -21,6 +21,45 @@
                 <span id="search-option-close-button">x</span>
             </div>
         </div>
+        <div class="popup-login-desktop" id="popup-login-desktop">
+            <div class="overlay-login-content">
+                <div class="justify-content-center">
+                    <div class="form-login-desktop">
+                        <div class="customer-login-form">
+                            <div class="popup-login-close-button" id="popup-login-close-button">X</div>
+                            <div class="login-icon-popup-login">
+                                <a href="index.html">
+                                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png?v=1623954544" alt="Main Street Bistro" width="160" />
+                                </a>
+                            </div>
+                            <h2 class="title-tab-login">Great to have you back</h2>
+                            <div class="mailrrr">
+                                <form action="" id="customer-login" method="post">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email address" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" required />
+                                    </div>
+                                    <div class="form-check">
+                                        <a href="" class="recover-password">Forgot your password?</a>
+                                    </div>
+                                    <button class="login-popup-button">LOG IN</button>
+                                </form>
+                            </div>
+                            <div class="or-creat">
+                                <div class="box-register">
+                                    <span class="or-register">
+                                        Don't have an account?
+                                    </span>
+                                    <a href="" class="create-account">Register now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="js-minicart minicart" id="js-minicart">
             <div class="relative">
                 <div class="mini-content">
@@ -44,25 +83,6 @@
             <div class="top-info">
                 <p>Minimum Delievery Order is $30. <a href="">Order Now >></a></p>
             </div>
-            <!-- <div class="js-minicart minicart" id="js-minicart">
-                <div class="relative">
-                    <div class="mini-content">
-                        <div class="mini-cart-head">
-                            <p class="mini-cart-head-close-button" id="mini-cart-head-close-button">X</p>
-                            <h3 class="mini-cart-head-heading">Shopping Cart</h3>
-                            <p class="mini-cart-head-product-count">0</p>
-                        </div>
-                    </div>
-                    <div class="mini-cart-bottom">
-                        <div class="list-product-minicart">
-                            <div class="empty-product-minicart">
-                                <p class="empty-product-minicart-para">Your shopping bag is empty</p>
-                                <button class="empty-product-minicart-button">Go To The Shop</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="nav">
                 <div class="nav-logo">
                     <a href=""><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
@@ -88,7 +108,7 @@
                         <i class="far fa-search" id="nav-search-icon"><span>Search</span></i>
                     </div>
                     <div class="nav-icons-user">
-                        <i class="far fa-user"><span>User</span></i>
+                        <i class="far fa-user" id="nav-popup-login"><span>User</span></i>
                     </div>
                     <div class="nav-icons-cart">
                         <i class="far fa-shopping-cart" id="shopping-cart"><span>Cart</span></i>
@@ -126,69 +146,429 @@
                 <p class="menu-heading">Our Menu</p>
                 <div class="menu-options">
                     <ul class="menu-list">
-                        <a href="">
-                            <li class="vegan-pizzas">Vegan Pizzas</li>
-                        </a>
-                        <a href="">
-                            <li class="pizzas">Pizzas</li>
-                        </a>
-                        <a href="">
-                            <li class="drinks">Drinks</li>
-                        </a>
-                        <a href="">
-                            <li class="salads">Salads</li>
-                        </a>
-                        <a href="">
-                            <li class="pides">Pides</li>
-                        </a>
-                        <a href="">
-                            <li class="sides">Sides</li>
-                        </a>
-                        <a href="">
-                            <li class="wraps">Wraps</li>
-                        </a>
-                        <a href="">
-                            <li class="kids-meal">Kids Meal</li>
-                        </a>
-                        <a href="">
-                            <li class="Bistro-set-meals">Bistro Set Meals</li>
-                        </a>
-                        <a href="">
-                            <li class="Combos">Combos</li>
-                        </a>
+                            <li class="vegan-pizzas" id="menu-list-vegan-pizzas">Vegan Pizzas</li>
+                            <li class="pizzas" id="menu-list-pizzas">Pizzas</li>
+                            <li class="drinks" id="menu-list-drinks">Drinks</li>
+                            <li class="salads" id="menu-list-salads">Salads</li>
+                            <li class="pides" id="menu-list-pides">Pides</li>
+                            <li class="sides" id="menu-list-sides">Sides</li>
+                            <li class="wraps" id="menu-list-wraps">Wraps</li>
+                            <li class="kids-meal" id="menu-list-kids-meal">Kids Meal</li>
+                            <li class="Bistro-set-meals" id="menu-list-bistro-set-meals">Bistro's Set Meals</li>
+                            <li class="Combos" id="menu-list-combos">Combos</li>
                     </ul>
                 </div>
                 <div class="menu-cart">
-                    <div class="cart cart-one">
-                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1048511935.png?" alt="Mediterranean Pizza" />
-                        <p class="menu-info"><a href="">Mediterranean Pizza</a></p>
-                        <div class="menu-about">
-                            <p class="menu-price">$18.99</p>
-                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                    <div class="menu-cart-row menu-cart-row1 vegan-pizzas-cart" id="menu-cart-row1">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1048511935.png?" alt="Mediterranean Pizza" />
+                            <p class="menu-info"><a href="">Mediterranean Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$18.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1945423519.png?" alt="Mediterranean Pizza" />
+                            <p class="menu-info"><a href="">Meat Crumble (Plant Based)</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$18.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_608680349.png?" alt="Mediterranean Pizza" />
+                            <p class="menu-info"><a href="">Veggie</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$18.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_403620481.png" alt="Mediterranean Pizza" />
+                            <p class="menu-info"><a href="">Eggplant And Zucchini Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$18.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cart cart-two">
-                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1945423519.png?" alt="Mediterranean Pizza" />
-                        <p class="menu-info"><a href="">Meat Crumble (Plant Based)</a></p>
-                        <div class="menu-about">
-                            <p class="menu-price">$18.99</p>
-                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                    <div class="menu-cart-row menu-cart-row2" id="menu-cart-row2">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1186974097.png?v=1623741779" alt="Spicy Chicken Tikka" />
+                            <p class="menu-info"><a href="">Spicy Chicken Tikka</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1512983147.png?v=1623740985" alt="Butter Chicken" />
+                            <p class="menu-info"><a href="">Butter Chicken</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/BBQPizza.jpg" alt="BBQ Pizza" />
+                            <p class="menu-info"><a href="">BBQ Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="http://cdn.shopify.com/s/files/1/0568/0211/5759/products/PepperoniandbeefPizza.jpg" alt="Pepperoni And Beef Pizza" />
+                            <p class="menu-info"><a href="">Pepperoni And Beef Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cart cart-three">
-                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_608680349.png?" alt="Mediterranean Pizza" />
-                        <p class="menu-info"><a href="">Veggie</a></p>
-                        <div class="menu-about">
-                            <p class="menu-price">$18.99</p>
-                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                    <div class="menu-cart-row menu-cart-row3" id="menu-cart-row3">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Veggie.jpg" alt="Veggie" />
+                            <p class="menu-info"><a href="">Viggie</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_604399190.png" alt="Cheese Pizza" />
+                            <p class="menu-info"><a href="">Cheese Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Chef_sSignaturePizza.jpg" alt="Chef's Signature Pizza" />
+                            <p class="menu-info"><a href="">Chef's Signature Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/BistroPizza.png" alt="Bistro Pizza" />
+                            <p class="menu-info"><a href="">Bistro Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cart cart-four">
-                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_403620481.png" alt="Mediterranean Pizza" />
-                        <p class="menu-info"><a href="">Eggplant And Zucchini Pizza</a></p>
-                        <div class="menu-about">
-                            <p class="menu-price">$18.99</p>
-                            <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                    <div class="menu-cart-row menu-cart-row4" id="menu-cart-row4">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1873131430.png" alt="Mediterranean Pizza" />
+                            <p class="menu-info"><a href="">Mediterranean Pizza</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row5" id="menu-cart-row5">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/PureLeaf.jpg" alt="Pure Leaf 547ml" />
+                            <p class="menu-info"><a href="">Pure Leaf 547ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$3.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Popdrink.jpg" alt="Pop 355ml" />
+                            <p class="menu-info"><a href="">Pop 355ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$1.75</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1417591133.png" alt="Water Bottle 500ml" />
+                            <p class="menu-info"><a href="">Water Bottle 500ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$1.75</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Pepsi.jpg" alt="Pepsi 2L" />
+                            <p class="menu-info"><a href="">Pepsi 2L</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$3.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row6" id="menu-cart-row6">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1981699244.png" alt="Dole Juices 450ml" />
+                            <p class="menu-info"><a href="">Dole Juices 450ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$2.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_721764268.png" alt="Juice 200ml" />
+                            <p class="menu-info"><a href="">Pop 355ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$1.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Gatorade.jpg" alt="Gatorade 591ml" />
+                            <p class="menu-info"><a href="">Gatorade 591ml</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$2.90</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/ShezanMangoDrink.png" alt="Shezan Mango Drink" />
+                            <p class="menu-info"><a href="">Shezan Mango Drink</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$2.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row7" id="menu-cart-row7">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/FatuousSalad.jpg" alt="Fattoush Salad" />
+                            <p class="menu-info"><a href="">Fattoush Salad</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1689495748.png" alt="Greek Salad" />
+                            <p class="menu-info"><a href="">Greek Salad</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_271966997.png?" alt="Tabbouleh Salad" />
+                            <p class="menu-info"><a href="">Tabbouleh Salad</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_118773775.png" alt="Garden Salad" />
+                            <p class="menu-info"><a href="">Garden Salad</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row8" id="menu-cart-row8">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1758816275_1.png" alt="Chicken Sharwarma Pide" />
+                            <p class="menu-info"><a href="">Chicken Sharwarma Pide</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1325236721.png" alt="Our Signature Pide" />
+                            <p class="menu-info"><a href="">Our Signature Pide</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/VeggiePide.jpg" alt="Veggie Pide" />
+                            <p class="menu-info"><a href="">Veggie Pide</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1420324289.png" alt="Ground Meat Pide" />
+                            <p class="menu-info"><a href="">Ground Meat Pide</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row9" id="menu-cart-row9">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_510881971.png?" alt="Fries" />
+                            <p class="menu-info"><a href="">Fries</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/falafel.jpg" alt="Falafel (6pcs)" />
+                            <p class="menu-info"><a href="">Falafel (6pcs)</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$6.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1084984733.png" alt="Dips" />
+                            <p class="menu-info"><a href="">Dips</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$1.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_267494342.png" alt="Cheesy Bread" />
+                            <p class="menu-info"><a href="">Cheesy Bread</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$15.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row10" id="menu-cart-row10">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_450325447.png" alt="Chicken Wings" />
+                            <p class="menu-info"><a href="">Chicken Wings</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$9.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Hummus.jpg" alt="Hummus" />
+                            <p class="menu-info"><a href="">Hummus</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/TzatzikiDip.jpg?" alt="Tzatziki Dip" />
+                            <p class="menu-info"><a href="">Tzatziki Dip</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/BabaGhanoush.jpg" alt="Ground Meat Pide" />
+                            <p class="menu-info"><a href="">Baba Ghanoush</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$5.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row11" id="menu-cart-row11">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/ChickenShawarmaWrap.jpg" alt="Chicken Sharwarma Wrap" />
+                            <p class="menu-info"><a href="">Chicken Sharwarma Wrap</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$9.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1350432587.png" alt="Falafel Wrap" />
+                            <p class="menu-info"><a href="">Falafel Wrap</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$9.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_328460324.png" alt="Veggie Wrap" />
+                            <p class="menu-info"><a href="">Veggie Wrap</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$8.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row12" id="menu-cart-row12">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1787310107.png" alt="Healthy Bites For Little Eaters" />
+                            <p class="menu-info"><a href="">Healthy Bites For Little Eaters</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$6.50</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row13" id="menu-cart-row13">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/ChickenShawarmaMeal.jpg" alt="Chicken Sharwarma Meal" />
+                            <p class="menu-info"><a href="">Chicken Sharwarma Meal</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/FalafelMeal.png?" alt="Flafel Plate" />
+                            <p class="menu-info"><a href="">Falafel Plate</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/VeggieMeal.png" alt="Veggie Plate" />
+                            <p class="menu-info"><a href="">Veggie Plate</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-four">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/DolmaMeal.png" alt="Dolma Plate" />
+                            <p class="menu-info"><a href="">Dolma Plate</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$14.99</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-cart-row menu-cart-row14" id="menu-cart-row14">
+                        <div class="cart cart-one">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/04.jpg" alt="1 Medium Pizza And A Side Of Garden Salad Or Regular Fries" />
+                            <p class="menu-info"><a href="">1 Medium Pizza And A Side Of Garden Salad Or Regular Fries</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$16.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-two">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/01.jpg" alt="XL Pizza With 2 Meat Toppings Plus 2L Pop" />
+                            <p class="menu-info"><a href="">XL Pizza With 2 Meat Toppings Plus 2L Pop</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$20.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
+                        </div>
+                        <div class="cart cart-three">
+                            <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Untitled-2.jpg" alt="XL Pizza With 2 Veg Toppings Plus 2L Pop" />
+                            <p class="menu-info"><a href="">XL Pizza With 2 Veg Toppings Plus 2L Pop</a></p>
+                            <div class="menu-about">
+                                <p class="menu-price">$18.00</p>
+                                <p class="add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,25 +643,6 @@
                     <p>Designed by Headstartt</p>
                 </div>
             </div>
-        </div>
-        <div id="form-user" class="form-user">
-            <form class="form-content animate" action="/action_page.php">
-                <div class="form-user-close-button">
-                    <span onclick="document.getElementById('form-user').style.dispay = 'none'" class="close" title="Close Popup">&times;</span>
-                </div>
-                <div class="form-user-img-container">
-                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" />
-                    <hr />
-                    <p>Great to have you back!</p>
-                </div>
-                <div class="form-user-container">
-                    <input type="email" placeholder="Email address" name="email" required />
-                    <input type="password" placeholder="Password" name="password" required />
-                    <p><small>Forgot your password?</small></p>
-                    <input type="submit" value="LOG IN" />
-                    <p><small>Don't have an account? Register Now</small></p>
-                </div>
-            </form>
         </div>
     </div>
 
