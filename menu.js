@@ -37,7 +37,8 @@ const menuCartRow13 = document.getElementById('menu-cart-row13');
 const menuCartRow14 = document.getElementById('menu-cart-row14');
 const prevSlideButton = document.getElementById('prev-slide-button');
 const nextSlideButton = document.getElementById('next-slide-button');
-const draggable = document.getElementById('draggable');
+const slickTrack = document.getElementById('slick-track');
+let count = 0;
 
 
 navSearchIcon.addEventListener('click', () => {
@@ -77,6 +78,7 @@ popupLoginCloseButton.addEventListener('click', () => {
     body.style.opacity = '1';
 })
 
+/*
 menuListVeganPizzas.addEventListener('click', () => {
     menuCartRow1.style.display = 'flex';
     menuCartRow2.style.display = 'none';
@@ -247,7 +249,7 @@ menuLlistCombos.addEventListener('click', () => {
     menuCartRow12.style.display = 'none';
     menuCartRow13.style.display = 'none';
 })
-
+*/
 window.addEventListener('keyup', () => {
     if(searchBarInput.value.length < 2) {
         searchNote.innerHTML = 'You must enter at least 2 characters';
@@ -270,6 +272,22 @@ body.onclick = function(event) {
 
 /* Start of Menu Page Script */
 nextSlideButton.addEventListener('click', () => {
-    draggable.style.left = '-178px';
+    if(count < 4){
+        count++;
+        slickTrack.style.transform += 'translate3d(-178px, 0px, 0px)';
+        console.log(count);
+    }
+})
+
+prevSlideButton.addEventListener('click', () => {
+    if(count == 0){
+        slickTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+        console.log(count);
+    }
+    else{
+        slickTrack.style.transform += 'translate3d(178px, 0px, 0px)';
+        count--;
+        console.log(count);
+    }
 })
 /* End of Menu Page Script */

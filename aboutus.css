@@ -1,0 +1,46 @@
+.our-story{
+    display: flex;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.our-story .image-left,
+.our-story .our-story-right{
+    flex: 1;
+}
+
+.image-left{
+    margin-right: 30px;
+}
+
+.image-left img{
+    transition: all .4s;
+}
+
+.image-left img:hover{
+    transform: scale(0.95);
+    filter: grayscale(100%);
+}
+
+.our-story-right h3{
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    color: rgb(56, 55, 55);
+}
+
+.our-story-right h3::after{
+    content: '';
+    width: 45px;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background-color: #edc600;
+}
+
+.our-story-right p{
+    color:rgb(88, 87, 87);
+    line-height: 30px;
+    font-size: 14px;
+}

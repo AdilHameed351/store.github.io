@@ -93,7 +93,7 @@
     width: 500px;
     margin: auto;
     background-color: #fff;
-    box-shadow: 7px 6px 40px 0 rgba(204, 204, 223, .16);
+    box-shadow: 1px 1px 20px 0 #000;
     position: fixed;
     max-width: 90%;
     top: 20px;
@@ -216,12 +216,13 @@
 .popup-login-close-button{
     position: fixed;
     bottom: 100.5%;
-    color: #fff;
+    color: #b19402;
     right: 5px;
     cursor: pointer;
     font-weight: 900;
     font-size: 20px;
     text-transform: uppercase;
+    z-index: 111111111111;
 }
 
 .popup-login-close-button:hover
@@ -549,7 +550,7 @@
 .menu-cart-row11,
 .menu-cart-row12,
 .menu-cart-row13,
-.menu-cart-row14{
+.menu-cart-row14{   
     display: none;
 }
 
@@ -728,5 +729,3 @@
         transform: translateY(0px);
     }
 }
-
-

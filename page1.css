@@ -1,0 +1,320 @@
+*{
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.section-collection-v1{
+    transition: all .3s ease;
+}
+
+.mt-all{
+    margin-top: 70px;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.slick-slider{
+    position: relative;
+    display: block;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.no-gutters{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.section-collection-v1 button.prev-slide{
+    left: 0;
+}
+
+.section-collection-v1 button.prev-slide{
+    font-size: 20px;
+    border: none;
+    top: 35%;
+    width: 40px;
+    color: #333;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .09);
+    height: 40px;
+    border-radius: 0;
+    text-align: center;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.section-collection-v1 button.prev-slide:hover{
+    background-color: #edc600;
+    color: #fff;
+}
+
+button, html[type="button"]{
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+button{
+    position: absolute;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    display: inline-block;
+    user-select: text;
+    font-weight: 400;
+}
+
+.fa{
+    display: inline-block;
+    font-weight: inherit;
+    text-rendering: auto;
+}
+
+.slick-slider, 
+.slick-list{
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s ease;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+.section-collectin-v1 .col-item{
+    padding: 20px;
+    width: 100px
+}
+
+.slick-initialized .slick-slide{
+    display: block;
+}
+ 
+.slick-slide{
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    margin: 0 14px;
+}
+
+.col-lg-4{
+    max-width: 33.3333%;
+}
+
+.col-12, .col-lg-4, .col-md-4, .col-sm-6{
+    position: relative;
+}
+
+.section-collection-v1 .item{
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease 0s;
+}
+
+.section-collection-v1 .item .box-img{
+    transition: all .5s ease 0s;
+    border-radius: 50%;
+    border: 8px solid rgba(237, 198, 0, .2);
+}
+
+.section-collection-v1 .item .box-img:hover{
+    border: 8px solid #af9304;
+}
+
+.box-img{
+    overflow: hidden;
+}
+
+.item a{
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    background: 0 0;
+}
+
+.item a:hover{
+    color: #edc600;
+}
+
+.item img{
+    border-style: none;
+    width: 133px;
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.item img:hover{
+    transform: scale(1.2);
+}
+
+.section-collection-v1 .item .category-info{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section-collection-v1 .item .category-info .box-info a{
+    font-size: 19px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.section-collection-v1 button.next-slide{
+    right: 0;
+}
+
+.section-collection-v1 button.next-slide{
+    font-size: 20px;
+    border: none;
+    top: 35%;
+    width: 40px;
+    color: #333;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .09);
+    height: 40px;
+    border-radius: 0;
+    text-align: center;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.section-collection-v1 button.next-slide:hover{
+    background-color: #edc600;
+    color: #fff;
+}
+
+.menu-page-cart-row{
+    display: flex;
+}
+
+.container-menu-page-cart .menu-page-cart{
+    margin: 40px 15px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.menu-page-cart img{
+    width: 100%;    
+    margin-bottom: 10px;
+}
+
+.menu-page-info{
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.menu-page-info a{
+    color: #000;
+    text-decoration: none;
+}
+
+.menu-page-info a:hover{
+    color: #edc600;
+}
+
+.menu-page-about{
+    position: relative;
+}
+
+.menu-page-price{
+    font-size: 13px;
+    font-weight: 700;
+    color: #edc600;
+}
+
+.menu-page-add-to-cart-button{
+    position: absolute;
+    top: 12px;
+    font-size: 13px;
+    color: #edc600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    visibility: hidden;
+}
+
+.menu-page-cart:hover .menu-page-add-to-cart-button{
+    visibility: visible;
+    top: 0;
+    transition: .2s all;
+}
+
+.menu-page-cart:hover .menu-page-price{
+    visibility: hidden;
+}
+
+.menu-page-cart .menu-page-add-to-cart-button a{
+    text-decoration: none;
+    color: #edc600;
+}
+
+.menu-page-pagination-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.menu-page-pagination-buttons div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(196, 192, 192);
+    text-align: center;
+    line-height: 40px;
+    margin: 0 5px;
+    transition: all .5s;
+}
+
+.menu-page-pagination-buttons div a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color:rgb(112, 111, 111);
+}
+
+.menu-page-pagination-buttons div.active{
+    background-color: #000;
+    color: #fff;
+}
+
+.menu-page-pagination-buttons div:hover{
+    background-color: #000;
+}
+
+.menu-page-pagination-buttons div:hover a{
+    color: #fff;
+}

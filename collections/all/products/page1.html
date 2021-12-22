@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/0568/0211/5759/t/2/assets/favicon.png?v=4975264353487013101" type="image/png" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../../../style.css" />
+    <link rel="stylesheet" type="text/css" href="page1.css" />
+    <title>Main Street Bistro</title>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="search-option-container" id="search-option-container">
+            <div class="search-option">
+                <p class="search-text">Start typing and hit Enter</p>
+                <div class="search-bar" id="search-bar">
+                    <input type="text" placeholder="Search anything" id="search-bar-input" />
+                    <i class="far fa-search"></i>
+                </div>
+                <p class="search-note" id="search-note"></p>
+                <span id="search-option-close-button">x</span>
+            </div>
+        </div>
+        <div class="popup-login-desktop" id="popup-login-desktop">
+            <div class="overlay-login-content">
+                <div class="justify-content-center">
+                    <div class="form-login-desktop">
+                        <div class="customer-login-form">
+                            <div class="popup-login-close-button" id="popup-login-close-button">X</div>
+                            <div class="login-icon-popup-login">
+                                <a href="../../../index.html">
+                                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png?v=1623954544" alt="Main Street Bistro" width="160" />
+                                </a>
+                            </div>
+                            <h2 class="title-tab-login">Great to have you back</h2>
+                            <div class="mailrrr">
+                                <form action="" id="customer-login" method="post">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email address" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" required />
+                                    </div>
+                                    <div class="form-check">
+                                        <a href="" class="recover-password">Forgot your password?</a>
+                                    </div>
+                                    <button class="login-popup-button">LOG IN</button>
+                                </form>
+                            </div>
+                            <div class="or-creat">
+                                <div class="box-register">
+                                    <span class="or-register">
+                                        Don't have an account?
+                                    </span>
+                                    <a href="" class="create-account">Register now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="js-minicart minicart" id="js-minicart">
+            <div class="relative">
+                <div class="mini-content">
+                    <div class="mini-cart-head">
+                        <p class="mini-cart-head-close-button" id="mini-cart-head-close-button">X</p>
+                        <h3 class="mini-cart-head-heading">Shopping Cart</h3>
+                        <p class="mini-cart-head-product-count">0</p>
+                    </div>
+                </div>
+                <div class="mini-cart-bottom">
+                    <div class="list-product-minicart">
+                        <div class="empty-product-minicart">
+                            <p class="empty-product-minicart-para">Your shopping bag is empty</p>
+                            <button class="empty-product-minicart-button">Go To The Shop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body" id="body">
+            <div class="top-info">
+                <p>Minimum Delievery Order is $30. <a href="">Order Now >></a></p>
+            </div>
+            <div class="nav">
+                <div class="nav-logo">
+                    <a href="../../../index.html"><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
+                </div>
+                <div class="nav-items-container">
+                    <ul class="nav-items">
+                        <a href="../../../index.html">
+                            <li class="nav-home">Home<span>Home</span></li>
+                        </a>
+                        <a href="../../../aboutus.html">
+                            <li class="nav-about">About Us<span>About Us</span></li>
+                        </a>
+                        <a href="../../../menu.html">
+                            <li class="nav-menu">Menu<span>Menu</span></li>
+                        </a>
+                        <a href="../../../contactus.html">
+                            <li class="nav-contact-us">Contact Us<span>Contact Us</span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <div class="nav-icons-search">
+                        <i class="far fa-search" id="nav-search-icon"><span>Search</span></i>
+                    </div>
+                    <div class="nav-icons-user">
+                        <i class="far fa-user" id="nav-popup-login"><span>User</span></i>
+                    </div>
+                    <div class="nav-icons-cart">
+                        <i class="far fa-shopping-cart" id="shopping-cart"><span>Cart</span></i>
+                    </div>
+                </div>
+            </div>
+            <div class="large-image">
+                <div class="image">
+                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/pizza.jpg" alt="large image" width="100%" />
+                </div>
+                <div class="text-on-image">
+                    <p class="big-text" style="animation: none;">Our Menu</p>
+                </div>
+            </div>
+            <!-- Start Category Filter -->
+            <div id="collection-template">
+                <div class="section-collection-v1 mt-all">
+                    <div class="container container-v2" style="max-width: 1100px;">
+                        <div class="row no-gutters js-collection-v1 slick-initiailized slick-slider">
+                            <button class="prev-slide slick-arrow" id="prev-slide-button" type="button">
+                                <i class="fa fa-angle-left"></i>
+                            </button>
+                            <div class="slick-list draggable" id="draggable">
+                                <div class="slick-track" id="slick-track" style="opacity: 1; width: 2000px;">
+                                    <!-- transform: translate3d(-1074px, 0px, 0px) -->
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                        <div class="item">
+                                            <div class="box-img">
+                                                <a href="drinks.html" title="Drinks">
+                                                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Drinks.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                </a>
+                                            </div>
+                                            <div class="category-info">
+                                                <div class="box-info">
+                                                    <a href="drinks.html">Drinks</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                        <div class="item">
+                                            <div class="box-img">
+                                                <a href="kidsmeal.html" title="Kids meal">
+                                                    <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Kids_meal.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                </a>
+                                            </div>
+                                            <div class="category-info">
+                                                <div class="box-info">
+                                                    <a href="kidsmeal.html">Kids meal</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+         
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="bistrosetmeal.html" title="Bistro's Set Meals">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Meal.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="bistrosetmeal.html">Bistro's Set Meals</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="pides.html" title="Pides">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Pide.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="pides.html">Pides</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="pizzas.html" title="Pizzas">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Pizzas.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="Pizzas.html">Pizzas</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="salads.html" title="Salads">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Salad.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="salads.html">Salads</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="sides.html" title="Sides">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Side_Dish.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="sides.html">Sides</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="veganpizzas.html" title="Vegan Pizzas">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Vegan_Pizza.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="veganpizzas.html">Vegan Pizzas</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="wraps.html" title="Wraps">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Wraps.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="wraps.html">Wraps</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+         
+                                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 col-item slick-slide slick-clonned">
+                                         <div class="item">
+                                             <div class="box-img">
+                                                 <a href="combos.html" title="Combos">
+                                                     <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/01.jpg" class="lazyload img-fluid w-100" alt="_img_collection" />
+                                                 </a>
+                                             </div>
+                                             <div class="category-info">
+                                                 <div class="box-info">
+                                                     <a href="combos.html">Combos</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+
+                                </div>
+                            </div>
+                            <button class="next-slide slick-arrow"  id="next-slide-button" type="button">
+                                <i class="far fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Category  -->
+
+            <div class="container-menu-page-cart">
+                <div class="menu-page-cart-row menu-page-cart-row1 vegan-pizzas-menu-page-cart" id="menu-page-cart-row1">
+                    <div class="menu-page-cart menu-page-cart-one">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/ChickenShawarmaWrap.jpg" alt="Chicken Sharwarma Wrap" />
+                        <p class="menu-page-info"><a href="">Chicken Sharwarma Wrap</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$9.50</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-two">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/PureLeaf.jpg" alt="Pure Leaf 547ml" />
+                        <p class="menu-page-info"><a href="">Pure Leaf 547ml</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$3.00</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-three">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1350432587.png" alt="Falafel Wrap" />
+                        <p class="menu-page-info"><a href="">Falafel Wrap</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$9.50</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-four">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/Popdrink.jpg" alt="Pop 355ml" />
+                        <p class="menu-page-info"><a href="">Pop 355ml</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$1.75</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-page-cart-row menu-page-cart-row2 vegan-pizzas-menu-page-cart" id="menu-page-cart-row2">
+                    <div class="menu-page-cart menu-page-cart-one">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/ChickenShawarmaMeal.jpg" alt="Chicken Sharwarma Meal" />
+                        <p class="menu-page-info"><a href="">Chicken Sharwarma Meal</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$14.99</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-two">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1186974097.png" alt="Spicy Chicken Tikka" />
+                        <p class="menu-page-info"><a href="">Spicy Chicken Tikka</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$14.99</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-three">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1512983147.png" alt="Butter Chicken" />
+                        <p class="menu-page-info"><a href="">Butter Chicken</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$14.99</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-four">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/FatuousSalad.jpg" alt="Fattoush Salad" />
+                        <p class="menu-page-info"><a href="">Fattoush Salad</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$5.00</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-page-cart-row menu-page-cart-row3 vegan-pizzas-menu-page-cart" id="menu-page-cart-row3">
+                    <div class="menu-page-cart menu-page-cart-one">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_1417591133.png" alt="Water Bottle 500ml" />
+                        <p class="menu-page-info"><a href="">Water Bottle 500ml</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$1.75</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-two">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/BBQPizza.jpg" alt="BBQ Pizza" />
+                        <p class="menu-page-info"><a href="">BBQ Pizza</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$14.99</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-three">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/shutterstock_510881971.png" alt="Fries" />
+                        <p class="menu-page-info"><a href="">Fries</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$5.00</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                    <div class="menu-page-cart menu-page-cart-four">
+                        <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/products/PepperoniandbeefPizza.jpg" alt="Pepperoni And Zucchini Pizza" />
+                        <p class="menu-page-info"><a href="">Pepperoni And Zucchini Pizza</a></p>
+                        <div class="menu-page-about">
+                            <p class="menu-page-price">$18.99</p>
+                            <p class="menu-page-add-to-cart-button"><a href="" title="Add to Cart">Add To Cart</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-page-pagination-buttons">
+                <div class="pagination-option1 active">
+                    1
+                </div>
+                <div class="pagination-option2">
+                    <a href="page2.html">2</a>
+                </div>
+                <div class="pagination-option3">
+                    <a href="page3.html">3</a>
+                </div>
+                <div class="pagination-option4">
+                    ...
+                </div>
+                <div class="pagination-option5">
+                    <a href="page5.html">5</a>
+                </div>
+                <div class="pagination-option6">
+                    <a href="page2.html"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="sponser">
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Skip1.jpg" alt="Skip The Dishes" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Uber_logo.jpg" alt="Uber Eats" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/fantuan.jpg" alt="Delivery Fantuan" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/logo2.jpg?v=1625569827" alt="Kabu Delivers" width="185" />
+                <img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/Doordas.jpg?v=1625566975" alt="Doordash" width="185" /> 
+            </div>
+
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href=""><img src="https://cdn.shopify.com/s/files/1/0568/0211/5759/files/msb-logo.png" width="160" alt="logo" /></a>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li>
+                                <a href="../../../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../../../aboutus.html">About</a>
+                            </li>
+                            <li>
+                                <a href="../../../menu.html">Menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-ex-nav">
+                        <ul>
+                            <li>
+                                <a href="../../../contactus">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="../../../privacypolicy.html">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="../../../termsconditions.html">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-info-envelope">
+                            <i class="fas fa-envelope"></i>
+                            <a href="">info@mainstreetbistro.ca</a>
+                        </div>
+                        <div class="footer-info-location">
+                            <i class="fas fa-location-arrow"></i>
+                            4331 Main Street, Vancouver, BC V5V 3R1
+                        </div>
+                        <div class="footer-info-phone">
+                            <i class="fas fa-phone"></i>
+                            <a href="">(604)568-4713,(604)568-4712</a> 
+                        </div>
+                        <div class="footer-info-clock">
+                            <i class="fa fa-clock"></i>
+                            Mon-Thurs - 11am to 9pm / Friday - 11am to 10pm / Sat-Sun - 11am to 9pm
+                        </div>
+                        <div class="footer-info-note">
+                            <p>Please Note: Orders are accepted up to 20 minutes before closing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Designed by Headstartt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="../../../menu.js"></script>
+
+</body>
+</html>
