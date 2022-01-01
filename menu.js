@@ -39,6 +39,13 @@ const prevSlideButton = document.getElementById('prev-slide-button');
 const nextSlideButton = document.getElementById('next-slide-button');
 const slickTrack = document.getElementById('slick-track');
 let count = 0;
+const filter = document.getElementById('filter');
+const filterOption = document.getElementById('filter-option');
+let filterOptionCounter = false;
+const featuredTop = document.getElementById('featured-top');
+const featuredList = document.getElementById('featured-list');
+let featuredTopCounter = false;
+
 
 
 navSearchIcon.addEventListener('click', () => {
@@ -259,7 +266,7 @@ window.addEventListener('keyup', () => {
 })
 
 body.onclick = function(event) {
-    if(event.target != navSearchIcon && event.target != shoppingCart && event.target != navPopupLogin){
+    if(event.target != navSearchIcon && event.target != shoppingCart && event.target != navPopupLogin && event.target != featuredTop){
         searchOptionContainer.style.height = '0vh';
         searchOptionCloseButton.style.display = 'none';
         searchBar.classList.remove('search-bar-animation');
@@ -267,6 +274,8 @@ body.onclick = function(event) {
         jsMiniCart.style.right = '-380px';
         popupLoginDesktop.style.transform = 'scale(0)';
         popupLoginDesktop.style.transition = 'none';
+        featuredList.style.display = 'none';
+        featuredTopCounter = false;
     }
 }
 
@@ -290,4 +299,31 @@ prevSlideButton.addEventListener('click', () => {
         console.log(count);
     }
 })
+
+filter.addEventListener('click', () => {
+    if(filterOptionCounter == false) {
+        filterOption.style.height = '400px';
+        filterOption.style.padding = '30px';
+        filterOption.style.border = '1px solid #b8b6b6';
+        filterOptionCounter = true;
+    } else {
+        filterOption.style.height = '0px';
+        filterOption.style.padding = '0px';
+        filterOption.style.border = 'none';
+        filterOptionCounter = false;
+    }
+})
+
+featuredTop.addEventListener('click', () => {
+    if(featuredTopCounter == false) {
+        featuredList.style.display = 'block';
+        featuredTopCounter = true;
+    } else {
+        featuredList.style.display = 'none';
+        featuredTopCounter = false;
+
+    }
+})
 /* End of Menu Page Script */
+
+

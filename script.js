@@ -77,6 +77,8 @@ popupLoginCloseButton.addEventListener('click', () => {
     body.style.opacity = '1';
 })
 
+
+
 menuListVeganPizzas.addEventListener('click', () => {
     menuCartRow1.style.display = 'flex';
     menuCartRow2.style.display = 'none';
@@ -92,6 +94,8 @@ menuListVeganPizzas.addEventListener('click', () => {
     menuCartRow12.style.display = 'none';
     menuCartRow13.style.display = 'none';
     menuCartRow14.style.display = 'none';
+    menuListVeganPizzas.style.backgroundColor = "#edc600";
+    menuListVeganPizzas.style.color = '#fff';
 })
 
 menuListPizzas.addEventListener('click', () => {

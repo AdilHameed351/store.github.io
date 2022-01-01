@@ -81,7 +81,7 @@
         </div>
         <div class="body" id="body">
             <div class="top-info">
-                <p>Minimum Delievery Order is $30. <a href="">Order Now >></a></p>
+                <p>Minimum Delievery Order is $30. <a href="menu.html">Order Now >></a></p>
             </div>
             <div class="nav">
                 <div class="nav-logo">
@@ -146,16 +146,16 @@
                 <p class="menu-heading">Our Menu</p>
                 <div class="menu-options">
                     <ul class="menu-list">
-                            <li class="vegan-pizzas" id="menu-list-vegan-pizzas">Vegan Pizzas</li>
-                            <li class="pizzas" id="menu-list-pizzas">Pizzas</li>
-                            <li class="drinks" id="menu-list-drinks">Drinks</li>
-                            <li class="salads" id="menu-list-salads">Salads</li>
-                            <li class="pides" id="menu-list-pides">Pides</li>
-                            <li class="sides" id="menu-list-sides">Sides</li>
-                            <li class="wraps" id="menu-list-wraps">Wraps</li>
-                            <li class="kids-meal" id="menu-list-kids-meal">Kids Meal</li>
-                            <li class="Bistro-set-meals" id="menu-list-bistro-set-meals">Bistro's Set Meals</li>
-                            <li class="Combos" id="menu-list-combos">Combos</li>
+                            <li class="vegan-pizzas menu-list-options active" id="menu-list-vegan-pizzas">Vegan Pizzas</li>
+                            <li class="pizzas menu-list-options" id="menu-list-pizzas">Pizzas</li>
+                            <li class="drinks menu-list-options" id="menu-list-drinks">Drinks</li>
+                            <li class="salads menu-list-options" id="menu-list-salads">Salads</li>
+                            <li class="pides menu-list-options" id="menu-list-pides">Pides</li>
+                            <li class="sides menu-list-options" id="menu-list-sides">Sides</li>
+                            <li class="wraps menu-list-options" id="menu-list-wraps">Wraps</li>
+                            <li class="kids-meal menu-list-options" id="menu-list-kids-meal">Kids Meal</li>
+                            <li class="Bistro-set-meals menu-list-options" id="menu-list-bistro-set-meals">Bistro's Set Meals</li>
+                            <li class="Combos menu-list-options" id="menu-list-combos">Combos</li>
                     </ul>
                 </div>
                 <div class="menu-cart">
@@ -594,33 +594,33 @@
                     <div class="footer-nav">
                         <ul>
                             <li>
-                                <a href="">Home</a>
+                                <a href="#">Home</a>
                             </li>
                             <li>
-                                <a href="">About</a>
+                                <a href="aboutus.html">About</a>
                             </li>
                             <li>
-                                <a href="">Menu</a>
+                                <a href="menu.html">Menu</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-ex-nav">
                         <ul>
                             <li>
-                                <a href="">Contact Us</a>
+                                <a href="contactus.html">Contact Us</a>
                             </li>
                             <li>
-                                <a href="">Privacy Policy</a>
+                                <a href="privacypolicy.html">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="">Terms & Conditions</a>
+                                <a href="termsconditions.html">Terms & Conditions</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-info">
                         <div class="footer-info-envelope">
                             <i class="fas fa-envelope"></i>
-                            <a href="">info@mainstreetbistro.ca</a>
+                            <a href="mailto:adilhameed674@gmail.com">info@mainstreetbistro.ca</a>
                         </div>
                         <div class="footer-info-location">
                             <i class="fas fa-location-arrow"></i>
@@ -628,7 +628,7 @@
                         </div>
                         <div class="footer-info-phone">
                             <i class="fas fa-phone"></i>
-                            <a href="">(604)568-4713,(604)568-4712</a> 
+                            <a href="tel:(604) 568-4712">(604)568-4713,(604)568-4712</a>
                         </div>
                         <div class="footer-info-clock">
                             <i class="fa fa-clock"></i>
@@ -646,6 +646,12 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', 'ul li.menu-list-options', function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

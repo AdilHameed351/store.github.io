@@ -1,0 +1,136 @@
+h1, h2, h3, h4, h5, h6{
+    letter-spacing: .75px;
+}
+
+.privacy-policy-content{
+    width: 70%;
+    margin: 20px auto;
+    color: rgb(32, 32, 32);
+}
+
+.privacy-policy-content .privacy-policy-main-heading{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 3rem;
+    color: rgb(45, 45, 46);
+}
+
+.privacy-policy-main-heading-content-paragraph{
+    margin-bottom: 12px;
+}
+
+.collecting-personal-information-heading{
+    margin-bottom: 5px;
+}
+
+.device-information-paragraph{
+    margin: 18px 0;
+    text-decoration: underline;
+}
+
+ul{
+    margin-left: 45px;
+}
+
+ul li{
+    letter-spacing: 0.65px;
+}
+
+.order-information-paragraph{
+    margin: 18px 0;
+    text-decoration: underline;
+}
+
+.customer-support-information-paragraph{
+    margin: 18px 0;
+    text-decoration: underline;
+}
+
+.minors-heading{
+    margin-bottom: 5px;
+}
+
+.sharing-personal-information-heading{
+    margin: 18px 0 5px 0;
+}
+
+.share-personal-information-paragraph{
+    margin-bottom: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: #edc600;
+}
+
+.behavioural-advertising-paragraph{
+    margin: 5px 0px 10px 0;
+}
+
+.using-personal-information-heading{
+    margin-bottom: 5px;
+}
+
+.lawful-basis-heading{
+    margin-bottom: 5px;
+}
+
+.retention-heading{
+    margin-bottom: 5px;
+}
+
+.automatic-decision-making-heading{
+    margin-bottom: 5px;
+}
+
+.selling-personal-inforamtion{
+    margin-bottom: 5px;
+}
+
+.your-rights{
+    margin-bottom: 5px;
+}
+
+.gdpr-heading{
+    margin-bottom: 5px;
+}
+
+.ccpa-heading{
+    margin-bottom: 5px;
+}
+
+.cookies-heading{
+    margin-bottom: 5px;
+}
+
+.cookies-necessary-heading{
+    margin-bottom: 5px;
+}
+
+table{
+    padding: 10px;
+}
+
+table tr th, table tr td{
+    padding: 15px 150px 15px 0;
+}
+
+table tr th{
+    text-align: left
+}
+
+.do-not-track-heading{
+    margin-bottom: 5px;
+}
+
+.changes-heading{
+    margin-bottom: 5px;
+}
+
+.contact-heading{
+    margin-bottom: 5px;
+}

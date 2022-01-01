@@ -70,7 +70,8 @@ button, html[type="button"]{
     appearance: button;
 }
 
-button{
+.prev-slide,
+.next-slide{
     position: absolute;
     text-transform: none;
     overflow: visible;
@@ -219,14 +220,125 @@ button{
     color: #fff;
 }
 
+
+.filter-and-featured-option{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+
+.filter{
+    border: 1px solid #000;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+}
+
+.filter:hover{
+    background-color: #edc600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.featured-box{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nine-dots{
+    border: 1px solid #000;
+    font-size: 25px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.featured{
+    position: relative;
+}
+
+.feature-top{
+    display: flex;
+    border: 1px solid #000;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.featured-list{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 105%;
+    background-color: #fff;
+}
+
+.featured-list ul{
+    border: 1px solid #000;
+}
+
+.featured-list ul li{
+    list-style: none;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.featured-list ul li:hover{
+    background-color: #d8b504;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filter-option{
+    margin: 0px 20px;
+    height: 0;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.filter-option h3{
+    letter-spacing:2px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.filter-option h3::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 60px;
+    height: 1px;
+    background-color: #edc600;
+}
+
+.filter-option ul li{
+    margin: 10px 0;
+    list-style: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    color: rgb(56, 55, 55);
+}
+
+.filter-option ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.filter-option ul li a:hover{
+    color: #edc600;
+}
+
 .menu-page-cart-row{
     display: flex;
 }
 
 .container-menu-page-cart .menu-page-cart{
     margin: 40px 15px;
+    width: 22.5%;
     cursor: pointer;
-    width: 25%;
 }
 
 .menu-page-cart img{
