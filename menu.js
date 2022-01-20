@@ -11,30 +11,30 @@ const miniCartHeadCloseButton = document.getElementById('mini-cart-head-close-bu
 const navPopupLogin = document.getElementById('nav-popup-login');
 const popupLoginDesktop = document.getElementById('popup-login-desktop');
 const popupLoginCloseButton = document.getElementById('popup-login-close-button');
-const menuListVeganPizzas = document.getElementById('menu-list-vegan-pizzas');
-const menuListPizzas = document.getElementById('menu-list-pizzas');
-const menuListDrinks = document.getElementById('menu-list-drinks');
-const menuListSalads = document.getElementById('menu-list-salads');
-const menuListPides = document.getElementById('menu-list-pides');
-const menuListSides = document.getElementById('menu-list-sides');
-const menuListWraps = document.getElementById('menu-list-wraps');
-const menuListKidsMeal = document.getElementById('menu-list-kids-meal');
-const menuListBistroSetMeals = document.getElementById('menu-list-bistro-set-meals');
-const menuLlistCombos = document.getElementById('menu-list-combos');
-const menuCartRow1 = document.getElementById('menu-cart-row1');
-const menuCartRow2 = document.getElementById('menu-cart-row2');
-const menuCartRow3 = document.getElementById('menu-cart-row3');
-const menuCartRow4 = document.getElementById('menu-cart-row4');
-const menuCartRow5 = document.getElementById('menu-cart-row5');
-const menuCartRow6 = document.getElementById('menu-cart-row6');
-const menuCartRow7 = document.getElementById('menu-cart-row7');
-const menuCartRow8 = document.getElementById('menu-cart-row8');
-const menuCartRow9 = document.getElementById('menu-cart-row9');
-const menuCartRow10 = document.getElementById('menu-cart-row10');
-const menuCartRow11 = document.getElementById('menu-cart-row11');
-const menuCartRow12 = document.getElementById('menu-cart-row12');
-const menuCartRow13 = document.getElementById('menu-cart-row13');
-const menuCartRow14 = document.getElementById('menu-cart-row14');
+// const menuListVeganPizzas = document.getElementById('menu-list-vegan-pizzas');
+// const menuListPizzas = document.getElementById('menu-list-pizzas');
+// const menuListDrinks = document.getElementById('menu-list-drinks');
+// const menuListSalads = document.getElementById('menu-list-salads');
+// const menuListPides = document.getElementById('menu-list-pides');
+// const menuListSides = document.getElementById('menu-list-sides');
+// const menuListWraps = document.getElementById('menu-list-wraps');
+// const menuListKidsMeal = document.getElementById('menu-list-kids-meal');
+// const menuListBistroSetMeals = document.getElementById('menu-list-bistro-set-meals');
+// const menuLlistCombos = document.getElementById('menu-list-combos');
+// const menuCartRow1 = document.getElementById('menu-cart-row1');
+// const menuCartRow2 = document.getElementById('menu-cart-row2');
+// const menuCartRow3 = document.getElementById('menu-cart-row3');
+// const menuCartRow4 = document.getElementById('menu-cart-row4');
+// const menuCartRow5 = document.getElementById('menu-cart-row5');
+// const menuCartRow6 = document.getElementById('menu-cart-row6');
+// const menuCartRow7 = document.getElementById('menu-cart-row7');
+// const menuCartRow8 = document.getElementById('menu-cart-row8');
+// const menuCartRow9 = document.getElementById('menu-cart-row9');
+// const menuCartRow10 = document.getElementById('menu-cart-row10');
+// const menuCartRow11 = document.getElementById('menu-cart-row11');
+// const menuCartRow12 = document.getElementById('menu-cart-row12');
+// const menuCartRow13 = document.getElementById('menu-cart-row13');
+// const menuCartRow14 = document.getElementById('menu-cart-row14');
 const prevSlideButton = document.getElementById('prev-slide-button');
 const nextSlideButton = document.getElementById('next-slide-button');
 const slickTrack = document.getElementById('slick-track');
@@ -42,10 +42,16 @@ let count = 0;
 const filter = document.getElementById('filter');
 const filterOption = document.getElementById('filter-option');
 let filterOptionCounter = false;
+let featuredBoxNavigation = document.getElementById('featured-box-navigation');
+let featuredBox = document.getElementById('featured-box');
+let featuredBoxNavigationDivOne = document.getElementById('featured-box-navigation-div-one');
+let featuredBoxNavigationDivTwo = document.getElementById('featured-box-navigation-div-two');
+let featuredBoxNavigationDivThree = document.getElementById('featured-box-navigation-div-three');
 const featuredTop = document.getElementById('featured-top');
 const featuredList = document.getElementById('featured-list');
 let featuredTopCounter = false;
-
+let nineDots = document.getElementById('nine-dots');
+let menuPageCart = document.getElementsByClassName('menu-page-cart');
 
 
 navSearchIcon.addEventListener('click', () => {
@@ -314,6 +320,62 @@ filter.addEventListener('click', () => {
     }
 })
 
+featuredBoxNavigation.addEventListener('mouseover', () => {
+    featuredBoxNavigation.style.transform = 'scaleX(1)';
+    featuredBoxNavigation.style.opacity = '1';
+})
+
+featuredBoxNavigation.addEventListener('mouseout', () => {
+    featuredBoxNavigation.style.transform = 'scaleX(0)';
+    featuredBoxNavigation.style.opacity = '0';
+})
+
+featuredBoxNavigationDivOne.addEventListener('click', () => {
+    for(var i = 0; i < menuPageCart.length; i++) {
+        menuPageCart[i].style.width = "47%";
+    }
+    featuredBoxNavigationDivOne.style.backgroundColor = "#000";
+    featuredBoxNavigationDivOne.style.color = "#fff";
+    featuredBoxNavigationDivTwo.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivTwo.style.color = "#000";
+    featuredBoxNavigationDivThree.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivThree.style.color = "#000";
+})
+
+featuredBoxNavigationDivTwo.addEventListener('click', () => {
+    for(var i = 0; i < menuPageCart.length; i++) {
+        menuPageCart[i].style.width = "30.5%";
+    }
+    featuredBoxNavigationDivTwo.style.backgroundColor = "#000";
+    featuredBoxNavigationDivTwo.style.color = "#fff";
+    featuredBoxNavigationDivOne.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivOne.style.color = "#000";
+    featuredBoxNavigationDivThree.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivThree.style.color = "#000";
+})
+
+featuredBoxNavigationDivThree.addEventListener('click', () => {
+    for(var i = 0; i < menuPageCart.length; i++) {
+        menuPageCart[i].style.width = "22.4%";
+    }
+    featuredBoxNavigationDivThree.style.backgroundColor = "#000";
+    featuredBoxNavigationDivThree.style.color = "#fff";
+    featuredBoxNavigationDivOne.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivOne.style.color = "#000";
+    featuredBoxNavigationDivTwo.style.backgroundColor = "#fff";
+    featuredBoxNavigationDivTwo.style.color = "#000";
+})
+
+nineDots.addEventListener('mouseover', () => {
+    featuredBoxNavigation.style.transform = 'scaleX(1)';
+    featuredBoxNavigation.style.opacity = '1';
+})
+
+nineDots.addEventListener('mouseout', () => {
+    featuredBoxNavigation.style.transform = 'scaleX(0)';
+    featuredBoxNavigation.style.opacity = '0';
+})
+
 featuredTop.addEventListener('click', () => {
     if(featuredTopCounter == false) {
         featuredList.style.display = 'block';
@@ -321,7 +383,6 @@ featuredTop.addEventListener('click', () => {
     } else {
         featuredList.style.display = 'none';
         featuredTopCounter = false;
-
     }
 })
 /* End of Menu Page Script */
