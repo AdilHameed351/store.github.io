@@ -11,6 +11,7 @@ const miniCartHeadCloseButton = document.getElementById('mini-cart-head-close-bu
 const navPopupLogin = document.getElementById('nav-popup-login');
 const popupLoginDesktop = document.getElementById('popup-login-desktop');
 const popupLoginCloseButton = document.getElementById('popup-login-close-button');
+let menuListOptions = document.getElementsByClassName('menu-list-options');
 const menuListVeganPizzas = document.getElementById('menu-list-vegan-pizzas');
 const menuListPizzas = document.getElementById('menu-list-pizzas');
 const menuListDrinks = document.getElementById('menu-list-drinks');
@@ -77,7 +78,23 @@ popupLoginCloseButton.addEventListener('click', () => {
     body.style.opacity = '1';
 })
 
+for(let i = 0; i < menuListOptions.length; i++) {
+    menuListOptions[i].onclick = function () {
+        //remove class from the sibling
+        let el = menuListOptions[0];
+        while(el) {
+            if(el.tagName === "LI") {
+                //remove class
+                el.classList.remove('active');
+            }
+            //pass to the next sibling
+            el = el.nextSibling;
+        }
 
+        //Add class to the required element
+        this.classList.add("active");
+    }
+}
 
 menuListVeganPizzas.addEventListener('click', () => {
     menuCartRow1.style.display = 'flex';
@@ -94,8 +111,6 @@ menuListVeganPizzas.addEventListener('click', () => {
     menuCartRow12.style.display = 'none';
     menuCartRow13.style.display = 'none';
     menuCartRow14.style.display = 'none';
-    menuListVeganPizzas.style.backgroundColor = "#edc600";
-    menuListVeganPizzas.style.color = '#fff';
 })
 
 menuListPizzas.addEventListener('click', () => {

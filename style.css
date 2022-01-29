@@ -538,9 +538,9 @@
     display: flex;
 }
 
-ul li.active{
+ul li.active {
     background-color: #edc600;
-    color: #fff;
+    color: #fff; 
 }
 
 div.add-me{
@@ -656,7 +656,7 @@ div.add-me{
 .footer-top .footer-info{
     width: 25%;
     box-shadow: 0px 0px 3px rgb(189, 186, 186);
-    padding: 50px 25px;
+    padding: 50px 25px 80px 28px;
     background-color: #f3f3f3;
 }
 
@@ -687,6 +687,7 @@ div.add-me{
 
 .footer-info div{
     margin: 10px 0;
+    color: #212529;
 }
 
 .footer-info div i{
@@ -695,7 +696,7 @@ div.add-me{
 
 .footer-info div a {
     text-decoration: none;
-    color: #000;
+    color: #212529;
 }
 
 .footer-info-note p{
